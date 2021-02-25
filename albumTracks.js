@@ -10,7 +10,7 @@ AlbumTracks.generateCard = async () => {
     const { artists } = await Requests.getArtistsDetails("beatles")
     const { items } = await Requests.getArtistsAlbums(artists.items[0].id, 1);
     let cardDetails = Card.generateCard("Get an Album's Tracks", "Get Spotify catalog information about an album’s tracks. Optional parameters can be used to limit the number of tracks returned.", 
-    items[0].images[0].url, "Tracks", "album-tracks-modal")
+    items[0].images[0].url, "Album's Tracks", "album-tracks-modal")
     albumTracks.append(cardDetails)
 }
 

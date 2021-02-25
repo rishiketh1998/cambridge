@@ -47,5 +47,16 @@ Requests.getAlbumTracks = async (albumName) => {
     return await getTracks.json()
 }
 
+Requests.getArtistTopTracks = async (artist) => {
+    const token = await Requests.getAccessToken()
+    const response = await Requests.getArtistsDetails(artist)
+    const id = response.artists.items[0].id
+    const getTracks = await fetch(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=GB`, {
+        method: "GET",
+        headers: {'Authorization': `Bearer ` + token},
+    })
+    return await getTracks.json()
+}
+
 
 export default Requests;

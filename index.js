@@ -1,6 +1,7 @@
 import Navbar from './navbar.js'
 import ArtistAlbums from './artistAlbums.js'
 import AlbumTracks from './albumTracks.js'
+import ArtistTopTracks from "./artistTopTracks.js"
 
 $(document).ready(() => {
     Navbar.genrateNavbar()
@@ -12,4 +13,8 @@ $(document).ready(() => {
     AlbumTracks.onChange()
     AlbumTracks.onSubmit()
     AlbumTracks.onReset()
+    ArtistTopTracks.generateCard()
+    ArtistTopTracks.onChange()
+    ArtistTopTracks.onSubmit()
+    ArtistTopTracks.onReset()
 })
