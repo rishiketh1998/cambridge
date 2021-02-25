@@ -33,5 +33,19 @@ Requests.getArtistsAlbums = async (artistID, limit) => {
     return await response.json()
 }
 
+Requests.getAlbumTracks = async (albumName) => {
+    const token = await Requests.getAccessToken()
+    const response  = await fetch(`https://api.spotify.com/v1/search?q=${albumName}&type=album&limit=1`, {
+        method: "GET",
+        headers: {'Authorization': `Bearer ` + token},
+    })
+    const data = await response.json()
+    const getTracks = await fetch(`https://api.spotify.com/v1/albums/${data.albums.items[0].id}/tracks`, {
+        method: "GET",
+        headers: {'Authorization': `Bearer ` + token},
+    })
+    return await getTracks.json()
+}
+
 
 export default Requests;
