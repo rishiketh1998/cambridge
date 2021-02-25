@@ -8,7 +8,7 @@ ArtistTopTracks.tracks = []
 
 ArtistTopTracks.generateCard = async () => {
     let artistTopTracks = $("#artistTopTracks")
-    const { artists } = await Requests.getArtistsDetails("Bruno Mars")
+    const { artists } = await Requests.getArtistsDetails("Kana Boon")
     const { items } = await Requests.getArtistsAlbums(artists.items[0].id, 1);
     let cardDetails = Card.generateCard("Get an Artist's Top Tracks", "Get Spotify catalog information about an artist’s top tracks.", 
     items[0].images[0].url, "Artist's Top Tracks", "artist-top-tracks-modal")

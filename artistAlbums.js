@@ -70,8 +70,8 @@ ArtistAlbums.displayAlbumDetails = () => {
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Release_Date</th>
-            <th scope="col">Total_Tracks</th>
             <th scope="col">Image</th>
+            <th scope="col">Total Tracks</th>
           </tr>
         </thead>
         <tbody>
@@ -79,8 +79,8 @@ ArtistAlbums.displayAlbumDetails = () => {
         <th scope="row">${i+1}</th>
         <td>${data.name}</td>
         <td>${data.release_date}</td>
-        <td>${data.total_tracks}</td>
         <td><img src="${data.images[0].url}" height="100px"></td>
+        <td>${data.total_tracks}</td>
       </tr>`).join("")}
         </tbody>
       </table>`
