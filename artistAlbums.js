@@ -9,7 +9,7 @@ ArtistAlbums.generateCard = async () => {
     let artistAlbums = $("#artistAlbums")
     const { artists } = await Requests.getArtistsDetails("coldplay")
     const { items } = await Requests.getArtistsAlbums(artists.items[0].id, 1);
-    let cardDetails = Card.generateCard("View Albums", "View and Discover your favorite artists Albums", items[0].images[0].url, "Discover", "album-modal")
+    let cardDetails = Card.generateCard("Get an Artist's Albums", "Get Spotify catalog information about an artist’s albums.", items[0].images[0].url, "Discover", "album-modal")
     artistAlbums.append(cardDetails)
 }
 
@@ -62,7 +62,6 @@ ArtistAlbums.onReset = () => {
 
 ArtistAlbums.displayAlbumDetails = () => {
     let displayAlbums = $("#displayAlbums")
-    console.log(ArtistAlbums.albumData);
     if(ArtistAlbums.albumData.length > 0) {
         let table = `<table class="table">
         <thead>
