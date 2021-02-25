@@ -6,10 +6,10 @@ Card.generateCard = (title, description, img, btnText, btnID) => {
                 <img />
                 <div class="card-body">
                     <h5 class="card-title">${title}</h5>
-                    <p class="card-text" style="height:80px">${description}</p>
+                    <p class="card-text" style="height:90px";>${description}</p>
                 </div>
                 <div class="card-footer text-end border">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${btnID}">
+                    <button type="button" class="btn btn-dark text-success fw-bold" data-bs-toggle="modal" data-bs-target="#${btnID}">
                         ${btnText} <i class="far fa-hand-point-right ml-2"></i>
                     </button>
                 </div>
