@@ -9,7 +9,8 @@ ArtistAlbums.generateCard = async () => {
     let artistAlbums = $("#artistAlbums")
     const { artists } = await Requests.getArtistsDetails("coldplay")
     const { items } = await Requests.getArtistsAlbums(artists.items[0].id, 1);
-    let cardDetails = Card.generateCard("Get an Artist's Albums", "Get Spotify catalog information about an artist’s albums.", items[0].images[0].url, "Discover", "album-modal")
+    let cardDetails = Card.generateCard("Get an Artist's Albums", "Get Spotify catalog information about an artist’s albums.", items[0].images[0].url, 
+    "Artist's Albums", "album-modal")
     artistAlbums.append(cardDetails)
 }
 
