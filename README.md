@@ -1,2 +1,3 @@
-# cambridge
-A prototype website to display jQuery experience 
+# JQuery Practice
+
+Website built to learn JQuery 
